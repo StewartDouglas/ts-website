@@ -1,0 +1,86 @@
+<div id="headerwrap">
+    <div class="container">
+   
+		<div class="row" id="primary">
+			<div class="col-lg-6">
+
+				<div class="row centered">
+					<div class="col-lg-12">
+						<h1><b>TradeSafe</b></h1>
+					</div>
+				</div><!-- /row centered -->
+
+				<div class="row centered">	
+					<div class="col-lg-12">
+						<h1>Protect your business online.</h1>
+					</div>
+				</div><!-- /row centered -->
+
+				<div class="row centered register-div">	
+					<div class="col-lg-12">
+					<!-- <div class="col-lg-4 col-lg-offset-4"> -->
+						<!--
+					    <div class="clear">
+					    	<input type="submit" value="Learn More" name="subscribe" id="mc-embedded-subscribe" class="button">
+					    </div>
+						-->
+						<a href="/signup"><input type="submit" value="Register" name="subscribe" id="button-signup" class="button"></a>
+					</div>
+				</div><!-- /row centered -->
+
+				<div class="row centered ts-explanation">
+					<div class="col-lg-12">
+						<h3>TradeSafe provides a simple API to check names against publically available data sets, including US and UK watchlists and lists of Politically Exposed Persons.</h3>
+					</div>
+				</div>
+
+			</div><!--/col-lg-6 -->
+
+
+			<!-- ********************************** CODE *********************************** -->
+
+
+			<div class="col-lg-6 code-example">
+				<div class="inner-code-example">
+
+					<h3>Request</h3>
+					<pre class="code-request">
+						<code class="code-snippet" onclick="select_all(this)">
+$ curl http://api.teamtradesafe.com/targets -d 'secondName=BAHAR' -d 'listType=Watchlist'
+	</code>
+					</pre>
+
+					<h3>Response</h3>
+					<pre class="code-response">
+						<code class="hljs json code-snippet">
+{
+	"entityType": "Individual",
+	"firstName": "Ahmad",
+	"lastName": "BAHAR",
+	"nationality": "",
+	"dataSource": "US Sanctions List",
+	"listType": "Watchlist",
+	"akaList": {
+	  "aka": {
+	    "uid": "9218",
+	    "type": "a.k.a.",
+	    "category": "strong",
+	    "firstName": "Ahmed Mohamed",	    
+	    "lastName": "BAHAR"
+	  }
+	},
+	"id": "548c55a7026e5b01f72b6645"
+}
+						</code>
+					</pre>	
+
+				</div><!-- /code-example -->
+
+			</div><!--/col-lg-6 -->
+		</div><!-- /row centered -->
+
+			<!-- ********************************** /			<!-- ********************************** CODE *********************************** -->cCODE *********************************** -->
+
+    </div><!-- /container -->
+</div><!-- /headerwrap -->
+
