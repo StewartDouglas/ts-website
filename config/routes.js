@@ -42,6 +42,10 @@ module.exports.routes = {
 
   '/documentation': {
     view: 'documentation'
+  },
+
+  '/confirmation': {
+    view: 'confirmation'
   }
 
   /***************************************************************************
