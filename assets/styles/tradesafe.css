@@ -65,7 +65,17 @@
 	border-radius: 0px;
 }
 
-#button-signup {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:22px; font-weight: 500; height: 45px; line-height: 45px; margin: 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
+.primary-left,
+.primary-right {
+    /*display: none;*/
+}
+
+#button-signup {
+    clear:both; 
+    background-color: #D9A800; 
+    border: 0 none; 
+    border-radius:4px; 
+    color: #FFFFFF; cursor: pointer; display: inline-block; font-size:22px; font-weight: 500; height: 45px; line-height: 45px; margin: 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
 
 .register-div {
     margin-top: 15px;
