@@ -100,7 +100,8 @@
 }
 
 .code-snippet {
-   padding: 0;
+   border: 2px;
+   padding: 0 20px;
    text-align: left; 
    white-space: pre; 
 }

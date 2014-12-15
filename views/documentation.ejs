@@ -1,12 +1,29 @@
 <div id="headerwrap">
     <div class="container">
    
-		<div class="row centered">
-			<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 code-example">
 
-				<h1>Coming Soon</h1>
+				<div class="inner-code-example">
+					<h3>Request all potential targets</h3>
+					<pre class="code-request"><code class="hljs bash code-snippet" onclick="select_all(this)">
+$ curl -X POST http://api.teamtradesafe.com/v1/targets</code></pre>
 
-				<h3>If you have any questions, please get in touch over Twitter <a href="https://twitter.com/TeamTradeSafe">@TeamTradeSafe</a></h3>
+					<h3>Request all Politically Exposed Persons</h3>
+					<pre class="code-request"><code class="hljs bash code-snippet" onclick="select_all(this)">
+$ curl -X POST http://api.teamtradesafe.com/v1/targets/peps</code></pre>
+
+					<h3>Request all individuals on US or UK watchlists</h3>
+					<pre class="code-request"><code class="hljs bash code-snippet" onclick="select_all(this)">
+$ curl -X POST http://api.teamtradesafe.com/v1/targets/watchlists</code></pre>
+
+					<h3>Request individual with specific attribute</h3>
+					<pre class="code-request"><code class="hljs bash code-snippet" onclick="select_all(this)">
+$ curl -X POST http://api.teamtradesafe.com/v1/targets/ -d lastName=BAHAR </code></pre>
+
+				</div>
+
+
 
 			</div>
 		</div>
