@@ -172,6 +172,32 @@
     margin-bottom: 50px;
 }
 
+.footer-copyright {
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+.link-privacy-policy {
+    text-align: right;
+/*    color: #FFFFFF;*/
+}
+
+.link-privacy-policy a {
+    color: #FFFFFF;
+}
+
+/* --- Privacy Policy ------- */
+
+.privacy-policy p,
+.privacy-policy ul li {
+    font-weight: bold;
+}
+
+.privacy-policy h3 {
+    color: #003571;
+}
+
+/* --- /Privacy Policy ------- */
 
 /* --- FAQ ------- */
 

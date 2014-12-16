@@ -46,7 +46,12 @@ module.exports.routes = {
 
   '/confirmation': {
     view: 'confirmation'
+  },
+
+  '/privacypolicy': {
+    view: 'privacypolicy'
   }
+
 
   /***************************************************************************
   *                                                                          *
