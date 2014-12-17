@@ -106,7 +106,8 @@
 .code-request {
     height: 65px;
     word-wrap: normal;
-    overflow-y:hidden;
+    overflow-y: hidden;
+/*    overflow-wrap: normal;*/
 }
 
 .code-snippet {
@@ -114,6 +115,10 @@
    padding: 0 20px;
    text-align: left; 
    white-space: pre; 
+}
+
+pre {
+    word-break:normal;
 }
 
 /* ----- /CODE ------ */
