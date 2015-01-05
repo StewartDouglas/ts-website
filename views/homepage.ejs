@@ -44,19 +44,20 @@ $ curl https://api.teamtradesafe.com/v1/targets -d last_name=BAHAR -d list_type=
 					<h3>Response</h3>
 					<pre class="code-response"><code class="hljs json code-snippet">
 {
-	"entityType": "Individual",
-	"firstName": "Ahmad",
-	"lastName": "BAHAR",
-	"nationality": "",
-	"dataSource": "US Sanctions List",
-	"listType": "Watchlist",
-	"akaList": {
-	  "aka": {
+	"object": "Individual",
+	"first_name": "Ahmad",
+	"last_name": "BAHAR",
+	"full_name": "Ahmad BAHAR",
+	"uri":"http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/consolidated.aspx",
+	"data_source": "US Sanctions List",
+	"list_type": "Watchlist",
+	"aka_list": {
+	  "aka1": {
 	    "uid": "9218",
 	    "type": "a.k.a.",
 	    "category": "strong",
-	    "firstName": "Ahmed Mohamed",	    
-	    "lastName": "BAHAR"
+	    "first_name": "Ahmed Mohamed",	    
+	    "last_name": "BAHAR"
 	  }
 	},
 	"id": "548c55a7026e5b01f72b6645"
