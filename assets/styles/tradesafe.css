@@ -211,7 +211,7 @@ pre {
 }
 
 .faq {
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: 100px;
 }
 
@@ -227,6 +227,22 @@ pre {
     font-style: bold;
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+.faq-subheader{
+    color: #000000;
+}
+
+.faq-anythingelse{
+    margin-top: -22px;
+}
+
+.faq-bold {
+    font-weight: 400;
+}
+
+.faq i {
+    color: #000000;
 }
 
 /* --------------- */

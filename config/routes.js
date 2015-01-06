@@ -40,6 +40,10 @@ module.exports.routes = {
     view: 'signup'
   },
 
+  '/understandingkyc': {
+    view: 'faq'
+  },  
+
   '/documentation': {
     view: 'documentation'
   },
