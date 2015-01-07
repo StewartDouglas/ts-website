@@ -1,3 +1,1 @@
-# app
-
-a [Sails](http://sailsjs.org) application
+The staging version of the website
