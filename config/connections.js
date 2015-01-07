@@ -21,6 +21,8 @@
 
 module.exports.connections = {
 
+  'default': 'memory';
+
   /***************************************************************************
   *                                                                          *
   * Local disk storage for DEVELOPMENT ONLY                                  *
