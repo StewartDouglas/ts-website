@@ -26,7 +26,8 @@
     "csvtojson": "",
     "mongodb": "",
     "sails-mongo": "",
-    "forever": ""
+    "forever": "",
+    "request": "~2.51.0"
   },
   "scripts": {
     "start": "node app.js",

@@ -54,7 +54,13 @@ module.exports.routes = {
 
   '/privacypolicy': {
     view: 'privacypolicy'
-  }
+  },
+
+  '/search':{
+    view: 'search'
+  },
+
+  '/targets/search': 'TargetsController.search'
 
 
   /***************************************************************************
