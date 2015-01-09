@@ -60,22 +60,24 @@ function search (query){
 		$(table).empty();
 
 		//first row
-		var row = "<tr><td>Name: " + values.name + "</td><td>List Type: " + values.type + "</td><td><a href=" + values.uri + ">More Info</a></td></tr>";
+		var row = "<tr><td><p>Name: <b>" + values.name + "</b></p></td><td><p>List Type: " + values.type + "</p></td><td><p><a href=" + values.uri + ">More Info</a></td></tr>";
 		$(table).append(row);
 
 		//second row
 		row = "<tr>";
 		if(values.country !== undefined){
-			row += "<td>Country: " + values.country + "</td>";
+			row += "<td><p>Country: " + values.country + "</p></td>";
 		}
 
 		if(values.position !== undefined){
-			row += "<td>Position: " + values.position + "</td>";
+			row += "<td><p>Position: " + values.position + "</p></td>";
 		}	
 
 		row += "</tr>";
 
 		$(table).append(row);
+
+		$('.searchResultDiv').css({'visibility':'visible'});
 
 		// display all rows of values object
 		// for (var prop in values) {
@@ -85,5 +87,6 @@ function search (query){
 		// 		$(table).append(row);
 		// 	}
 		// }
+
 	}
 }
