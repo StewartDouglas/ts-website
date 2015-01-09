@@ -1,34 +1,46 @@
 <div id="headerwrap">
     <div class="container main-search-container">
 		<div class="row centered searchRow">
-			<div class="col-lg-9 col-centered" id="searchBar">
-				<div id="searchDiv">
-					<div class="row centered">
-						<div class="col-lg-10 box-col">
-							<div class="searchInnerDiv">
-								<input id="searchBox" type="text" value="" placeholder="TradeSafe Search">
+			<div class="col-lg-12 col-centered">
+
+				<div class="row centered">
+					<div class="col-lg-9 col-centered" id="searchBar">
+						<div id="searchDiv">
+							<div class="row centered">
+								<div class="col-lg-10 box-col">
+									<div class="searchInnerDiv">
+										<input id="searchBox" type="text" value="" placeholder="TradeSafe Search">
+									</div>
+								</div>
+								<div class="col-lg-2 search-col">
+									<button id="searchButton" type='button' onclick="search($('#searchBox').val())">Search</button>
+								</div>
 							</div>
-						</div>
-						<div class="col-lg-2 search-col">
-							<button id="searchButton" type='button' onclick="search($('#searchBox').val())">Search</button>
 						</div>
 					</div>
 				</div>
-			</div>
 
 			<!-- Navigation buttons to go here -->
-			<div class="row centered">
-				<div class="col-lg-4 search-nav-button">
-					Customers
+				
+				<div class="row centered">				
+					<div class="col-lg-9 col-centered search-nav-buttons">
+						<div class="row centered">
+							<div class="col-lg-4">
+								<input type="submit" value="Customers" class="button search-nav-button">
+							</div>
+							<div class="col-lg-4">
+								<input type="submit" value="Previous Searches" class="button search-nav-button">
+							</div>
+							<div class="col-lg-4">
+								<input type="submit" value="My Account" class="button search-nav-button">
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-4 search-nav-button">
-					Previous Searches
-				</div>
-				<div class="col-lg-4 search-nav-button">
-					My Account
-				</div>
+
 			</div>
 		
+
 		</div>
 		<div class="row centered">
 			<div class="col-lg-9 col-centered searchResultDiv">

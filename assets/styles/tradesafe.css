@@ -22,7 +22,7 @@
 }
 
 #headerwrap .col-lg-9 {
-	margin-top: 30px;
+	/*margin-top: 20px;*/
 }
 
 #headerwrap .col-lg-3 {
@@ -261,6 +261,7 @@ pre {
 .searchRow {
     border-bottom: 2px solid #003571;
     background-color: #6783A3;
+    padding-bottom: 20px
 }
 
 #searchDiv {
@@ -276,7 +277,7 @@ pre {
 
 #searchBar {
     margin-top: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;    
@@ -325,6 +326,24 @@ pre {
     visibility: hidden; 
     border: 2px solid #003571;
     padding: 10px 20px; 
+    margin-top: 35px;
+}
+
+.search-nav-button {
+    border: 2px ;
+}
+
+.search-nav-button {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFFFFF;
+    background-color: #003571;
+}
+
+.searchRow .col-lg-4 {
+    padding: 0px;
+    border: 1px solid #FFFFFF;    
 }
 
 
