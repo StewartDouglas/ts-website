@@ -73,7 +73,7 @@ function search (query){
 		$(table).empty();
 
 		//first row
-		var row = "<tr><td><p>Name: <b>" + values.name + "</b></p></td><td><p>List Type: " + values.type + "</p></td><td><p><a href=" + values.uri + ">More Info</a></td></tr>";
+		var row = "<tr><td><p>Name: <b>" + values.name + "</b></p></td><td><p>List Type: " + values.type + "</p></td><td><p><a href=" + values.uri + " " + "target='_blank'>More Info</a></td></tr>";
 		$(table).append(row);
 
 		//second row
