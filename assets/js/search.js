@@ -77,17 +77,17 @@ function search (query){
 		$(table).empty();
 
 		//first row
-		var row = "<tr><td><p>Name: <b>" + values.name + "</b></p></td><td><p>List Type: " + values.type + "</p></td><td><p><a href=" + values.uri + " " + "target='_blank'>More Info</a></td></tr>";
+		var row = "<tr><td><p>Name: <b>" + values.name + "</b></p></td><td><p>List Type: <b>" + values.type + "</b></p></td><td><p><a href=" + values.uri + " " + "target='_blank'><b>More Info</b></a></td></tr>";
 		$(table).append(row);
 
 		//second row
 		row = "<tr>";
 		if(values.country !== undefined){
-			row += "<td><p>Country: " + values.country + "</p></td>";
+			row += "<td><p>Country: <b>" + values.country + "</b></p></td>";
 		}
 
 		if(values.position !== undefined){
-			row += "<td><p>Position: " + values.position + "</p></td>";
+			row += "<td><p>Position: <b>" + values.position + "</b></p></td>";
 		}
 
 		row += "</tr>";
