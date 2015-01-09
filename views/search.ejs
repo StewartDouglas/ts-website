@@ -1,5 +1,25 @@
-<div>
-	<input id="searchBox" type="text" value="">
-	<button type=button onclick="search($('#searchBox').val())">Search</button>
-	<table id="searchResult"></table>
+<div id="headerwrap">
+    <div class="container main-search-container">
+		<div class="row centered">
+			<div class="col-lg-9 col-centered" id="searchBar">
+				<div id="searchDiv">
+					<div class="row centered">
+						<div class="col-lg-10 box-col">
+							<div class="searchInnerDiv">
+								<input id="searchBox" type="text" value="" placeholder="Search...">
+							</div>
+						</div>
+						<div class="col-lg-2 search-col">
+							<button id="searchButton" type='button' onclick="search($('#searchBox').val())">Search</button>
+						</div>
+					</div>
+				</div>
+			</div>				
+
+			<div class="col-lg-9 col-centered">
+				<table id="searchResult"></table>
+			</div>
+
+		</div>
+	</div>
 </div>

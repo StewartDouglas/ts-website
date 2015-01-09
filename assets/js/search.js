@@ -29,7 +29,7 @@ function search (query){
 
 		for (var prop in values) {
 			console.log(values[prop]);
-			var row = "<tr><td>" + prop + "</td><td>" + values[prop] + "</td></tr>";
+			var row = "<tr><td>" + prop +  ": " + values[prop] + "</td></tr>";
 			$(table).append(row);
 		}
 	}
