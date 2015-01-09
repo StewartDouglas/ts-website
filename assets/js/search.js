@@ -5,9 +5,13 @@ function search (query){
 		var data = JSON.parse(response);
 
 		// display results
-		var result = formatResult(data);
-		console.log(result);
-		populateTable('searchResult', result)	;
+		if(data.length > 0){
+			var result = formatResult(data);
+			console.log(result);
+			populateTable('searchResult', result);
+		} else {
+			clearTable('searchResult');
+		}
 	})
 
 	function formatResult(input){
@@ -111,6 +115,11 @@ function search (query){
 		// 	}
 		// }
 
+	}
+
+	function clearTable(tableID){
+		$('#' + tableID).empty();
+		$('.searchResultDiv').css({'visibility':'hidden'});
 	}
 }
 
