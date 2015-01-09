@@ -321,6 +321,7 @@ pre {
 }
 
 .searchResultDiv {
+    display: none;
     border: 2px solid #003571;
     padding: 10px 20px; 
 }
