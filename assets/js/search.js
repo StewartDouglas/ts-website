@@ -71,11 +71,13 @@ function search (query){
 
 		if(values.position !== undefined){
 			row += "<td>Position: " + values.position + "</td>";
-		}	
+		}
 
 		row += "</tr>";
 
 		$(table).append(row);
+
+		$(table).show();
 
 		// display all rows of values object
 		// for (var prop in values) {
@@ -87,3 +89,9 @@ function search (query){
 		// }
 	}
 }
+
+$('#searchBox').keypress(function(e){
+	if(e.keyCode==13){
+		search($('#searchBox').val())
+	}
+});
