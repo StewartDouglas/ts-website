@@ -22,7 +22,6 @@
 }
 
 #headerwrap .col-lg-9 {
-    padding: 0;
 	margin-top: 30px;
 }
 
@@ -256,9 +255,12 @@ pre {
 }
 
 #backgroundSearchDiv {
-
     background-color: #f2f2f2;
+}
 
+.searchRow {
+    border-bottom: 2px solid #003571;
+    background-color: #6783A3;
 }
 
 #searchDiv {
@@ -274,6 +276,10 @@ pre {
 
 #searchBar {
     margin-top: 25px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;    
 }
 
 .searchInnerDiv {
@@ -309,6 +315,16 @@ pre {
     border-color: #003571;
     width: 100%;
 }
+
+#searchResult tr td { 
+    float: left;
+}
+
+.searchResultDiv {
+    border: 2px solid #003571;
+    padding: 10px 20px; 
+}
+
 
 /* --------------- */
 

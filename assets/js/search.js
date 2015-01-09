@@ -12,6 +12,7 @@ function search (query){
 	})
 
 	function formatResult(input){
+		console.log(input);
 		var values = input[0];
 		var result = Object();
 		result.name = values.first_name + " " + values.last_name;

@@ -5,7 +5,7 @@ $(document).ready(function(){
 		rules: {
 			first_name: {
 				required: true,
-				minlength 2
+				minlength: 2
 			},
 			last_name: {
 				required: true,
