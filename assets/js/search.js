@@ -71,13 +71,23 @@ function search (query){
 
 		if(values.position !== undefined){
 			row += "<td><p>Position: " + values.position + "</p></td>";
-		}	
+		}
 
 		row += "</tr>";
 
 		$(table).append(row);
 
 		$('.searchResultDiv').css({'visibility':'visible'});
+
+		//default color is green
+		var color = '#B1E6AA';
+
+		if(values.alert_flag){
+			//color red if person is on a sanction list
+			color = '#EA8485';
+		}
+
+		$('.searchResultDiv').css({'background-color':color});
 
 		// display all rows of values object
 		// for (var prop in values) {
