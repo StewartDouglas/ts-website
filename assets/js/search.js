@@ -20,11 +20,11 @@ function search (query){
 			result.country = values.nationality;
 		}
 
-		if(values.list_type.indexOf("PEP") > -1){
-			result.type = "Politically Exposed Person";
+		result.type = getPersonType(input);
+
+		if(result.type.indexOf("Politically Exposed Person") > -1){
 			result.alert_flag = 0;
 		} else {
-			result.type = "Sanction List";
 			result.alert_flag = 1;
 		}
 
@@ -33,6 +33,19 @@ function search (query){
 		result.uri = values.uri;
 
 		return result;
+	}
+
+	function getPersonType(input){
+		var type = "Politically Exposed Person";
+
+		//if the person is on any non-PEP lists then they are a sanction target
+		input.forEach(function(item){
+			if(item.list_type.indexOf("PEP") == -1){
+				type = "Sanction";
+			}
+		});
+
+		return type;
 	}
 
 	function getPosition(input){
