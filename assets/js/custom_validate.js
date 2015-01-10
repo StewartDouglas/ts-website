@@ -17,11 +17,11 @@ $(document).ready(function(){
 			},
 			password: {
 				required: true,				
-				minlength: 6
+				minlength: 8
 			},
 			confirmation: {
 				required: true,
-				minlength: 6,
+				minlength: 8,
 				equalTo: '#password'
 			}
 		},

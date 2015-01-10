@@ -27,7 +27,9 @@
     "mongodb": "",
     "sails-mongo": "",
     "forever": "",
-    "request": "~2.51.0"
+    "request": "~2.51.0",
+    "sails-mysql": "~0.10.8",
+    "bcrypt": "~0.8.0"
   },
   "scripts": {
     "start": "node app.js",

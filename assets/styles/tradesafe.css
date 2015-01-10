@@ -69,19 +69,56 @@
     /*display: none;*/
 }
 
+#button-learnmore {
+/*    background-color: #D9A800; */    
+    background-color: #FFFFFF;
+    color: #003571;
+/*    color: #FFFFFF;*/ 
+    margin: 0;            
+}
+
 #button-signup {
+/*    background-color: #D9A800; */
+    background-color: #003571;
+    color: #FFFFFF; 
+    margin-left: 10px; 
+}
+
+#button-learnmore,
+#button-signup {
+    border: 2px solid #FFFFFF;   
+    padding: 0 22px;      
     clear:both; 
-    background-color: #D9A800; 
-    border: 0 none; 
     border-radius:4px; 
-    color: #FFFFFF; cursor: pointer; display: inline-block; font-size:22px; font-weight: 500; height: 45px; line-height: 45px; margin: 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
+    cursor: pointer; 
+    display: inline-block; 
+    font-weight: 200;     
+    font-size:22px; 
+    height: 45px; 
+    line-height: 45px; 
+    text-align: center; 
+    text-decoration: none; 
+    vertical-align: top; 
+    white-space: nowrap; 
+    width: auto;
+}
+
+#button-login {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+#button-login a {
+    padding: 7px 10px;
+}
 
 .register-div {
     margin-top: 15px;
 }
 
-.ts-explanation {
-    margin-bottom: 20px
+.ts-explanation h3 {
+/*    margin-bottom: 20px*/
+    color: #FFFFFF;
 }
 
 /* ----- CODE ------ */
@@ -189,6 +226,15 @@ pre {
 .link-privacy-policy a {
     color: #FFFFFF;
 }
+
+/* --- Sign Up ------------- */
+
+#tm_main_form label {
+    color: #FFFFFF;
+}
+
+
+/* -------------------------- */
 
 /* --- Privacy Policy ------- */
 

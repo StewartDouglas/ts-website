@@ -40,7 +40,20 @@ module.exports = {
   		delete obj._csrf;
   		return obj;
   	}
+  }, // attributes
 
-  }
+    beforeCreate: function(values,next){
+      if(!values.password || values.password != values.confirmation){
+        return next({err: ["Password doesn't match password confirmation."]});
+      }
+
+      require('bcrypt').hash(values.password,10, function passwordEncrypted(err, encrypted_pass){
+        if(err) return next(err);
+        //console.log('GOT HERE');
+        values.encrypted_password = encrypted_pass;
+        //values.online = true;
+        next();
+      });
+    } 
 };
 
