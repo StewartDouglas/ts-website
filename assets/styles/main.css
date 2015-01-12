@@ -79,11 +79,11 @@ a:after {
     padding: 0;
 }
 
-.navbar-default {
+/*.navbar-default {
     border-radius: 0px;
 	background-color: #003571;
     border-color: transparent;
-}
+}*/
 
 .navbar-default .navbar-brand {
 	color: white;

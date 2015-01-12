@@ -20,6 +20,9 @@ function search (query){
 			result.country = values.nationality;
 		}
 
+		result.first_name = values.first_name;
+		result.last_name = values.last_name;
+
 		result.type = getPersonType(input);
 
 		if(result.type.indexOf("Politically Exposed Person") > -1){
@@ -31,6 +34,8 @@ function search (query){
 		result.position = getPosition(input);
 
 		result.uri = values.uri;
+
+		result.id = values.id;
 
 		return result;
 	}
@@ -84,7 +89,11 @@ function search (query){
 
 		if(values.position !== undefined){
 			row += "<td><p>Position: <b>" + values.position + "</b></p></td>";
+		} else {
+			row += "<td></td>"
 		}
+
+		row += "<td><input value=\"Add Customer\" type=\"submit\" class=\"btn btn-primary\"></td>"; // add check box
 
 		row += "</tr>";
 
@@ -99,6 +108,14 @@ function search (query){
 			//color red if person is on a sanction list
 			color = '#EA8485';
 		}
+
+		console.log(values.id);
+		$('#customer_create_form').append("<input type=\"hidden\" id=\"customer_id\" name=\"customer_id\" value='" + values.id + "'></input>");
+		$('#customer_create_form').append("<input type=\"hidden\" id=\"first_name\" name=\"first_name\" value='" + values.first_name+ "'></input>");
+		$('#customer_create_form').append("<input type=\"hidden\" id=\"last_name\" name=\"last_name\" value='" + values.last_name+ "'></input>");
+		$('#customer_create_form').append("<input type=\"hidden\" id=\"alert_flag\" name=\"alert_flag\" value='" + values.alert_flag+ "'></input>");
+		$('#customer_create_form').append("<input type=\"hidden\" id=\"uri\" name=\"uri\" value='" + values.uri+ "'></input>");
+
 
 		$('.searchResultDiv').css({'background-color':color});
 
@@ -119,3 +136,32 @@ $('#searchBox').keypress(function(e){
 		search($('#searchBox').val())
 	}
 });
+
+
+$('#peopleTab').on('click', function() {
+
+	io.socket.get('/customer/list', function(data) {
+
+		console.log(data);
+
+		$('#customerList').html("");
+
+		data.forEach(function(customer){
+			//default color is green
+			var color = '#B1E6AA';
+
+			if(customer.alert_flag){
+				//color red if person is on a sanction list
+				color = '#EA8485';
+			}
+
+			var row = "<tr style=\"background-color:" + color + "\"><td>" + customer.first_name + " " + customer.last_name + "</td><td><a href=\"" + customer.uri + "\">More Info</a></td></tr>"
+			console.log(row);
+			$('#customerList').append(row);
+		});
+
+	});
+
+});
+
+

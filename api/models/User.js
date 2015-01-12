@@ -21,6 +21,11 @@ module.exports = {
    		required: true 		
   	},
 
+    organisation: {
+      type: 'string',
+      required: true    
+    },    
+
   	email: {
   		type: 'string',
    		required: true,
@@ -30,6 +35,11 @@ module.exports = {
   	encrypted_password: {
   		type: 'string'
   	},
+
+    online: {
+      type: 'boolean',
+      defaultsTo: false
+    },
 
   	// executed before any data sent to client
   	toJSON: function(){

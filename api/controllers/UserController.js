@@ -16,6 +16,7 @@ module.exports = {
 	    var userObj = {
 		      first_name: req.param('first_name'),
 		      last_name: req.param('last_name'),
+		      organisation: req.param('organisation'),
 		      email: req.param('email'),
 		      password: req.param('password'),
 		      confirmation: req.param('confirmation')
@@ -34,9 +35,16 @@ module.exports = {
 
 			}
 
-			// res.json(user);
-			// req.session.flash = {}; 
-			res.redirect('/user/show/'+user.id);
+	      // Log user in
+	      req.session.authenticated = true;
+	      req.session.User = user;
+
+	      user.online = true;
+	      user.save(function(err,user){
+	      	if(err) return next(err);
+
+      		  res.redirect('/user/search/'+user.id);
+	      })
 
 		});
 
@@ -46,12 +54,22 @@ module.exports = {
 		User.findOne(req.param('id'),function foundUser(err,user){
 			if(err) return next(err);
 			if(!user) return next();
-			console.log(user);
+			//console.log(user);
 			res.view({
 				user:user
 			});
 		});
-	} // show
+	}, // show
+
+	search: function(req,res,next){
+		User.findOne(req.param('id'), function foundUser(err,user){
+			if(err) return next(err);
+			if(!user) return next();
+			res.view({
+				user:user
+			});
+		});
+	} // search
 
 };
 

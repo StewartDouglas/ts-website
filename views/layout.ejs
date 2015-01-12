@@ -55,8 +55,10 @@
           <ul class="nav navbar-nav navbar-right">
 <!--             <li class="page-scroll"><a href="/search">Search</a></li> -->   
             <li class="page-scroll"><a href="/understandingkyc">Understanding KYC</a></li> 
-            <li class="page-scroll"><a href="/documentation">API Documentation</a></li> 
-            <li class="page-scroll" id="button-login"><a href="/session/new">Login</a></li>           
+            <li class="page-scroll"><a href="/documentation">API Documentation</a></li>
+            <% if (!session.authenticated) { %> 
+                <li class="page-scroll" id="button-login"><a href="/session/new">Login</a></li>
+            <% } %>           
           </ul>
         
         <a class="nav navbar-nav navbar-brand navbar-left" href="mailto:hello@teamtradesafe.com">hello@teamtradesafe.com</a>

@@ -11,6 +11,10 @@ $(document).ready(function(){
 				required: true,
 				minlength: 2
 			},
+			organisation: {
+				required: true,
+				minglength: 2
+			},
 			email: {
 				required: true,
 				email: true

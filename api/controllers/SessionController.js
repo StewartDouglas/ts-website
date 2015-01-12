@@ -58,7 +58,7 @@ module.exports = {
 			}
 
 			// Compare password from the form params to the encrypted password of the user found.
-			bcrypt.compare(req.param('password'), user.encryptedPassword, function(err, valid) {
+			bcrypt.compare(req.param('password'), user.encrypted_password, function(err, valid) {
 				if (err) return next(err);
 
 				// If the password from the form doesn't match the password from the database...
@@ -79,9 +79,9 @@ module.exports = {
 				req.session.User = user;
 
 				// Change status to online
-				// user.online = true;
-				// user.save(function(err, user) {
-				// 	if (err) return next(err);
+				user.online = true;
+				user.save(function(err, user) {
+					if (err) return next(err);
 
 					// Inform other sockets (e.g. connected sockets that are subscribed) that this user is now logged in
 					// User.publishUpdate(user.id, {
@@ -99,11 +99,11 @@ module.exports = {
 					// }
 
 					//Redirect to their profile page (e.g. /views/user/show.ejs)
-					res.redirect('/user/show/' + user.id);
-				// });
+					res.redirect('/user/search/' + user.id);
+				 });
 			});
 		});
-	},
+	}, // create
 
 	destroy: function(req, res, next) {
 
