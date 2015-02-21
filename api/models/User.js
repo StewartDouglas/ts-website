@@ -9,6 +9,8 @@ module.exports = {
 
   schema: true,
 
+  adapter: 'someMysqlServer',
+
   attributes: {
 
   	first_name: {
