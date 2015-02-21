@@ -17,10 +17,10 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav nav-tabs">
-		        <li class="active"><a data-toggle="tab" href="#overview">Overview</a></li>
-		        <li><a data-toggle="tab" href="#verify">Verify</a></li>
-		        <li><a data-toggle="tab" href="#people" id="peopleTab">People</a></li>
-		        <li><a data-toggle="tab" href="#settings">Settings</a></li>		        		        
+		        <li class="search_tab active"><a data-toggle="tab" href="#overview">Overview</a></li>
+		        <li class="search_tab"><a data-toggle="tab" href="#people" id="peopleTab">Candidates</a></li>
+<!-- 		        <li><a data-toggle="tab" href="#verify">Verify</a></li> -->
+		        <li class="search_tab"><a data-toggle="tab" href="#settings">Settings</a></li>		        		        
 		        <li class="dropdown">
 		      </ul>
 <!-- 		      <ul class="nav nav-tabs nav-tabs-right">
@@ -71,13 +71,65 @@
 					<input type="hidden" name="_csrf" value="<%= _csrf %>">
 					</form>
 				</div>
+
 			</div>
 
 	    	<div id="people" class="tab-pane">
-				<div class="col-lg-9 col-centered">
-					<table id="customerList"></table>
+				<div class="row centered">
+					<div class="col-lg-9 col-centered">
+						<div class="row centered tab_header_row">
+							<div class="col-lg-6"><h3 class="tab_subheading">All candidates</h3></div>
+							<div class="col-lg-6"><input value="+ Add Candidate" type="button" class="btn btn-primary" id="add_candidate_button"></div>
+						</div>
+						<div class="row centered">
+							<table id="customerList"></table>
+						</div>
+					</div>
 				</div>
-	    	</div>
+			</div>
+
+
+	    	<div id="add_candidate" class="tab-pane">
+				<div class="row centered">
+<!-- 					<form action="/customer/create"> -->
+						<div class="col-lg-9 col-centered">
+							<div class="row centered tab_header_row">
+								<div class="col-lg-6">
+									<h3 class="tab_subheading">Add Candidate</h3>
+								</div>
+								<div class="col-lg-6">
+									<input value="Submit" type="button" class="btn btn-primary" id="add_new_candidate">
+								</div>
+							</div>
+
+							<div class="row centered tab_header_row">
+								<div class="col-lg-12">
+									<div class="row centered">
+										<h4 class="tab_sub_subheading">Required</h4>
+									</div>
+									<div class="row centered">
+										<input class="add_candidate_input" type="text" name="first_name" id="add_first_name" placeholder="First Name">
+										<input class="add_candidate_input" type="text" name="last_name" id="add_last_name"placeholder="Last Name">
+									</div>
+								</div>
+							</div>
+
+							<div class="row centered">							
+								<div class="col-lg-12">
+									<div class="row centered">
+										<h4 class="tab_sub_subheading">Optional</h4>
+									</div>
+									<div class="row centered">
+										<input class="add_candidate_input" type="text" name="passport_number" placeholder="Passport Number">
+										<input class="add_candidate_input" type="text" name="birth_date" placeholder="Date of birth">
+									</div>
+								</div>
+							</div>
+						</div>
+						<input type="hidden" name="_csrf" value="<%= _csrf %>">
+<!-- 					</form> -->
+				</div>	
+			</div>   	
 
 	    	<div id="settings" class="tab-pane">
 	    	</div>

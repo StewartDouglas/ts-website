@@ -146,8 +146,28 @@ $('#searchBox').keypress(function(e){
 	}
 });
 
+$('.search_tab').on('click', function() {
+
+	// $('#people').hide();
+	$('#add_candidate').hide();	
+
+});
+
+$('#add_new_candidate').on('click', function() {
+
+	var data = new Object();
+	data.first_name = $('#add_first_name').val();
+	data.last_name = $('#add_last_name').val();	
+
+	console.log(data);
+
+	io.socket.get('/customer/create', data); // callback is optional
+
+})
 
 $('#peopleTab').on('click', function() {
+
+	$('#people').show();
 
 	io.socket.get('/customer/list', function(data) {
 
@@ -164,7 +184,7 @@ $('#peopleTab').on('click', function() {
 				color = '#EA8485';
 			}
 
-			var row = "<tr style=\"background-color:" + color + "\"><td>" + customer.first_name + " " + customer.last_name + "</td><td><a href=\"" + customer.uri + "\">More Info</a></td></tr>"
+			var row = "<tr style=\"background-color:" + color + "\"><td>" + customer.first_name + " " + customer.last_name + "</td><td>Standard Check: Done</td><td>Enhanced Check: Done</td><td><a href=\"" + customer.uri + "\">More Info</a></td></tr>"
 			console.log(row);
 			$('#customerList').append(row);
 		});
@@ -172,5 +192,12 @@ $('#peopleTab').on('click', function() {
 	});
 
 });
+
+$('#add_candidate_button').on('click', function(){
+
+	$('#people').hide();
+	$('#add_candidate').show();
+
+})
 
 

@@ -9,15 +9,16 @@ module.exports = {
 	
 	create: function(req,res){
 
+		console.log(req);
 		console.log('req.session.User.id: ' + req.session.User.id);
-		console.log('req.param(\'customer_id\'): ' + req.param('customer_id'));
+		//console.log('req.param(\'customer_id\'): ' + req.param('customer_id'));
 
 		var customerObj = {
-		 	customer_id: req.param('customer_id'),
+		 	customer_id: 7,
 		 	first_name: req.param('first_name'),
 		 	last_name: req.param('last_name'),
-		 	alert_flag: req.param('alert_flag'),
-		 	uri: req.param('uri'),		 			 			 			 	
+		 	//alert_flag: req.param('alert_flag'),
+		 	//uri: req.param('uri'),		 			 			 			 	
 		 	user_id: req.session.User.id
 		}
 
