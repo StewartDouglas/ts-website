@@ -184,7 +184,7 @@ $('#peopleTab').on('click', function() {
 				color = '#EA8485';
 			}
 
-			var row = "<tr style=\"background-color:" + color + "\"><td>" + customer.first_name + " " + customer.last_name + "</td><td>Standard Check: Done</td><td>Enhanced Check: Done</td><td><a href=\"" + customer.uri + "\">More Info</a></td></tr>"
+			var row = "<tr style=\"background-color:" + color + "\"><td>" + customer.first_name + " " + customer.last_name + "</td><td>Standard Check: Done</td><td>Enhanced Check: Done</td><td><a href=\"" + customer.uri + "\" target=\"_blank\">More Info</a></td></tr>"
 			console.log(row);
 			$('#customerList').append(row);
 		});
