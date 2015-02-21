@@ -82,29 +82,19 @@
 }
 
 #button-signup {
-/*    background-color: #D9A800; */
-    background-color: #003571;
+    background-color: #D9A800; 
+/*    background-color: #003571;*/
     color: #FFFFFF; 
     margin-left: 10px; 
 }
 
 #button-learnmore,
 #button-signup {
-    border: 2px solid #FFFFFF;   
-    padding: 0 22px;      
     clear:both; 
-    border-radius:4px; 
-    cursor: pointer; 
-    display: inline-block; 
-    font-weight: 200;     
-    font-size:22px; 
-    height: 45px; 
-    line-height: 45px; 
-    text-align: center; 
-    text-decoration: none; 
-    vertical-align: top; 
-    white-space: nowrap; 
-    width: auto;
+    background-color: #D9A800;
+    border: 0 none;   
+    border-radius:4px;
+    color: #FFFFFF; cursor: pointer; display: inline-block; font-size:22px; font-weight: 500; height: 45px; line-height: 45px; margin: 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
 }
 
 #button-login {
@@ -112,9 +102,9 @@
     border-radius: 5px;
 }
 
-#button-login a {
+/*#button-login a {
     padding: 7px 10px;
-}
+}*/
 
 .register-div {
     margin-top: 15px;
@@ -300,6 +290,7 @@ pre {
 
 .dashboard-navbar {
     margin-top: 10px;
+    padding-bottom: 0px
 }
 
 .dashboard-headwrap {
@@ -425,11 +416,46 @@ pre {
     border: 1px solid #FFFFFF;    
 }
 
+#customerList {
+    width: 100%;
+}
 
 #customerList tr td {
     padding: 5px;
 }
 
+#add_candidate_button{
+    float: right;
+}
+
+.tab_subheading {
+    float: left;
+    margin-top: 5px
+}
+
+.tab_sub_subheading {
+    float: left;
+    margin-top: 0px;
+}
+
+.tab_header_row {
+    border-bottom: 1px solid #003571;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#add_candidate {
+    display: none;
+}
+
+.add_candidate_input {
+    width: 40%;
+    font-size: 20px;
+}
+
+#add_new_candidate {
+    float: right;
+}
 
 /* --------------- */
 

@@ -17,9 +17,8 @@
 				</div><!-- /row centered -->
 
 				<div class="row centered register-div">	
-					<div class="col-lg-8 col-lg-offset-2">
-						<a href="/understandingkyc" type="submit" name="subscribe" id="button-learnmore" class="button">Learn more</a>					
-						<a href="/user/new" type="submit" name="subscribe" id="button-signup" class="button">Sign up now</a>
+					<div class="col-lg-12">
+						<a href="/user/new"><input type="submit" value="Register" name="subscribe" id="button-signup" class="button"></a>					
 					</div>
 
 				</div><!-- /row centered -->
@@ -41,7 +40,7 @@
 
 					<h3>Request</h3>
 					<pre class="code-request"><code class="hljs bash code-snippet" onclick="select_all(this)">
-$ curl https://api.teamtradesafe.com/v1/targets -d last_name=BAHAR -d list_type=Watchlist</code></pre>
+$ curl https://api.teamtradesafe.com/v1/targets?last_name=BAHAR</code></pre>
 
 					<h3>Response</h3>
 					<pre class="code-response"><code class="hljs json code-snippet">
