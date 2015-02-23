@@ -165,6 +165,12 @@ $('#add_new_candidate').on('click', function() {
 
 })
 
+$('#overviewTab').on('click',function(){
+
+	$('#people').hide()
+
+});
+
 $('#peopleTab').on('click', function() {
 
 	$('#people').show();
@@ -190,6 +196,12 @@ $('#peopleTab').on('click', function() {
 		});
 
 	});
+
+});
+
+$('#settingsTab').on('click',function(){
+
+	$('#people').hide()
 
 });
 

@@ -121,6 +121,7 @@
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 4px;
+    margin-bottom: 40px;
 }
 
 .inner-code-example {
@@ -150,6 +151,30 @@
 pre {
     word-break:normal;
 }
+
+.response-codes {
+    color: #000000;
+    font-weight: 400;
+    border: 1px solid #cccccc;
+    border-radius: 4px;    
+}
+
+.response-codes table {
+    width: 100%;
+}
+
+.response-codes .even_row {
+    background-color: #f5f5f5;
+}
+
+.response-codes tr td {
+    padding: 10px 20px;
+
+}
+
+.response-code-columns {
+    width: 35%;
+ }
 
 /* ----- /CODE ------ */
 
