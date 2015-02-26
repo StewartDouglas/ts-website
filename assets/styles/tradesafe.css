@@ -6,6 +6,14 @@
     margin: 0 5px;
 }
 
+.navbar-collapse {
+    padding-right: 0px
+}
+
+.ts-container{
+    padding-right: 0px
+}
+
 #headerwrap, .dashboard-headwrap {
     background: url(../images/background.jpg) no-repeat center top;
 	margin-top: -30px;
@@ -531,6 +539,10 @@ pre {
 
     .email-signup {
         padding: 0px;
+    }
+
+    .ts-container{
+        padding-right: 15px;
     }
 
 }
